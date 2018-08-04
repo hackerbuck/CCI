@@ -15,6 +15,7 @@ for (i = 0; i < arr.size();i++) {
    cout << arr[i];
 }
 ```
+` string s1 (str) ; // makes a copy of str to s1 `
 
 * unordered_map
 
