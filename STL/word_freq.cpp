@@ -17,8 +17,8 @@ void print_freq (string str)
 
 int main()
 {
-    string s;
-    getline (cin, s);
+    string s;. 
+    getline (cin, s);  // ------> using cin directly causes problem <------ 
     print_freq (s);
     return 0;
 }
