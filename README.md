@@ -1,2 +1,2 @@
 # CCI
-Cracking the codind interview
+Cracking the coding interview
