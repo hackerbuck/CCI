@@ -1,3 +1,5 @@
+/* O(n) complexity */
+
 #include <iostream>
 using namespace std;
 
