@@ -1,5 +1,21 @@
 ## C++ STL libraries
 
+`#include <bits/stdc++.h>`
+
+* vector 
+
+```C++
+vector <int> arr;
+
+for (i = 0; i < n;i++) {
+   arr.push_back(ele);  // .pop_back() for removing !
+}
+
+for (i = 0; i < arr.size();i++) {
+   cout << arr[i];
+}
+```
+
 * unordered_map
 
 ```C++
