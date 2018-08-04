@@ -30,8 +30,7 @@ for (i = 0; i < arr.size();i++) {
     cout << "Found Key" << endl ;
 } 
 
-unordered_map<string, int>:: iterator itr;
-for (itr = umap.begin(); itr != umap.end(); itr++){
+for (auto itr = umap.begin(); itr != umap.end(); itr++){
     cout << "Key : " << itr->first << "Value : " << itr->second << endl;
 }
  
@@ -46,9 +45,8 @@ if (stringSet.find(key) == stringSet.end())
         cout << key << " not found\n";
 else
         cout << "Found " << key << endl;
-
-unordered_set<string> :: iterator itr;
-for (itr = stringSet.begin(); itr != stringSet.end(); itr++)
+        
+for (auto itr = stringSet.begin(); itr != stringSet.end(); itr++)
         cout << (*itr) << endl;
 }
 
