@@ -40,4 +40,4 @@ void rotateMatrix(int mat[][N])
     }
 }
 ```
-
+![matrix](IMG_20180805_130708.jpg)
