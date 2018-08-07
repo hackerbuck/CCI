@@ -37,3 +37,34 @@
  ```
  
  * Infix to postfix/prefix
+ 
+ ```
+	stack<char> st;
+ for (i = 0 ; i < str.size(); i++) {
+					if (!operator (str[i])) {
+								cout << s[i];
+					}
+					else if (s[i] == '(') {
+								st.push(s[i]) // push '(' into stack
+				 }
+					else if (s[i] == ')') {
+					
+								while (!s.empty() && st.top() != '(') {
+													st.pop()
+								}
+								if (st.top == '(') st.pop()			
+				}
+				else // an operator is encountered
+    {
+            while (!s.emoty() && Prec(str[i]) <= Prec(st.top())) {
+																cout << st.top()
+																st.pop()
+												}				
+            push(stack, exp[i]);
+     }
+ }
+	 while (!st.empty()) { // Take care of remaining elements left in stack
+						cout << st.top();
+						st.pop()
+		}
+ ```
