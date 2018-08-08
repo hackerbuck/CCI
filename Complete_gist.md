@@ -40,7 +40,7 @@ bool compare(pair<int, int> p1, pair<int, int> p2)
          
     // sort on the basis of decreasing order
     // of frequencies    
-    return p1.second > p2.second; // (a > b then gives decending order , a < b assending order)
+    return p1.second > p2.second; // (a > b gives decending order , a < b assending order)
 }
 
 void print_N_mostFrequentNumber(int arr[], int n, int k)
