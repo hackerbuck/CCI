@@ -10,8 +10,7 @@ if (umap.find())  then retuen false
 * Permutation string
 
 ```
-unordered_map<char,int> umap1
-unordered_map<char,int> umap2
+unordered_map<char,int> umap
 
 umap[s1[i]]++
 umap[s2[i]]--
