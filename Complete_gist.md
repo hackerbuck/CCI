@@ -10,3 +10,11 @@ int gcd(int a, int b)
 ```
 
 * LCM of 2 numbers : (a * b)/gcd (a,b)
+
+* Array rotation by d elements (useing reversal algorithm) 
+
+```
+  rvereseArray(arr, 0, d-1);
+  rvereseArray(arr, d, n-1);
+  rvereseArray(arr, 0, n-1);
+```
