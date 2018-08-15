@@ -17,7 +17,7 @@ int gcd(int a, int b)
 sort (arr, arr+n)
 sort (vector.bigin(), vector.end())
 ```
-* Array rotation by d elements (using reversal algorithm) 
+* Array rotation by d elements (using reversal algorithm, nahh not necessary!) 
 
 ```
   rvereseArray(arr, 0, d-1);
