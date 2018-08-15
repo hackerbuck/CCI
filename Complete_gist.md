@@ -11,7 +11,13 @@ int gcd(int a, int b)
 
 * LCM of 2 numbers : (a * b)/gcd (a,b)
 
-* Array rotation by d elements (useing reversal algorithm) 
+* Sort in C++ : 
+
+```
+sort (arr, arr+n)
+sort (vector.bigin(), vector.end())
+```
+* Array rotation by d elements (using reversal algorithm) 
 
 ```
   rvereseArray(arr, 0, d-1);
@@ -19,12 +25,133 @@ int gcd(int a, int b)
   rvereseArray(arr, 0, n-1);
 ```
 
-* Sort an array in C++ : `sort (arr, arr+n)`
+## C++ STL libraries
+
+`#include <bits/stdc++.h>`
+
+### vector 
+
+```C++
+vector <int> arr;
+
+for (i = 0; i < n;i++) {
+   arr.push_back(ele);  // .pop_back() for removing !
+}
+
+for (i = 0; i < arr.size();i++) {
+   cout << arr[i];
+}
+```
+### Stacks
+
+```C++
+ stack<char> st;
+ st.push(s[i]);
+ if (st.empty()) {...}
+ 
+ p=st.top();
+ st.pop();
+ ```
+
+*  Balanced paranthesis
+ 
+ ```C++
+bool balance(string s)
+{
+	char p = '';
+	stack<char> st;
+	for(int i=0;i<s.size();i++)
+	{  
+		if(s[i]=='(' || s[i]=='{' || s[i]=='[') {
+			st.push(s[i]);
+		} else if(st.empty()) {
+			return 0;
+		} else if(s[i]==')' ||s[i]=='}' || s[i]==']') {
+			p=st.top();
+			st.pop();
+		}
+		if(s[i]==')' && p!='(') {
+			return 0;
+		} else if(s[i]=='}' && p!='{') {
+			return 0;
+		} else if(s[i]==']' && p!='[')
+			return 0;
+		}
+	}
+}
+ ```
+ 
+ * Infix to postfix/prefix
+ 
+ ```
+void infix2pfix() {
+	stack<char> st;
+	for (i = 0 ; i < str.size(); i++) {
+		if (!operator (str[i])) {
+			cout << s[i];
+		} else if (s[i] == '(') {
+			st.push(s[i]) // push '(' into stack
+		}
+		else if (s[i] == ')') {
+			while (!s.empty() && st.top() != '(') {
+				st.pop()
+			}
+			if (st.top == '(') { 
+				st.pop()
+			}			
+		} else { // an operator is encountered
+			while (!s.empty() && Prec(str[i]) <= Prec(st.top())) { // pop all higher prcendece operator from stack 
+				cout << st.top()
+				st.pop()
+			}				
+			push(stack, exp[i]);
+		}
+	}
+	while (!st.empty()) { // Take care of remaining elements left in stack
+		cout << st.top();
+		st.pop()
+	}
+}
+ ```
 
 
-* C++ STL
 
-* prioroty queue (min or max heap)
+### unordered_map
+
+```C++
+ unordered_map<string, int> umap; // decleration
+ 
+ umap["He"] = 3; // intializing
+ umap.insert(make_pair("He", 3)); // another way
+ 
+ if (umap.find(key) == umap.end()) {
+    cout << "Unable to find value for given key" << endl ;
+} else {
+    cout << "Found Key" << endl ;
+} 
+
+for (auto itr = umap.begin(); itr != umap.end(); itr++){
+    cout << "Key : " << itr->first << "Value : " << itr->second << endl;
+}
+ 
+```
+### unorderd_set
+
+```C++
+unordered_set<string> uset;
+uset.insert("random_values");
+
+if (stringSet.find(key) == stringSet.end())
+        cout << key << " not found\n";
+else
+        cout << "Found " << key << endl;
+        
+for (auto itr = stringSet.begin(); itr != stringSet.end(); itr++)
+        cout << (*itr) << endl;
+}
+
+```
+### prioroty queue (min or max heap)
 
 ```
 empty() – Returns whether the queue is empty
@@ -35,7 +162,7 @@ pop() – Deletes the first element of the queue
 ```
 
 
-* Hashmap + sort + Pair
+### Hashmap + sort + Pair
 
 ```
 // C++ implementation to find k numbers with most
