@@ -9,6 +9,8 @@ int gcd(int a, int b)
 }
 ```
 
+* In-built function for GCD `__gcd (a,b)`
+
 * LCM of 2 numbers : (a * b)/gcd (a,b)
 
 * Sort in C++ : 
