@@ -66,6 +66,8 @@ int minSwaps(int arr[], int n)
 
 ```
 
+* Minimum number of swaps required to sort an array if only adjacent swap possible ==> **Inversion count**
+
 * Inversion count using merge sort  O(log (n))
 
 ```
