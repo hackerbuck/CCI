@@ -13,12 +13,59 @@ int gcd(int a, int b)
 
 * LCM of 2 numbers : (a * b)/gcd (a,b)
 
-* Sort in C++ : 
+* **Sorting** in C++ : 
 
 ```
 sort (arr, arr+n)
 sort (vector.bigin(), vector.end())
 ```
+
+* Minimum number of swaps required to sort an array
+
+![min_swap](https://github.com/hackerbuck/CCI/blob/master/images/b-1.png)
+
+`ans = Σi = 1k(cycle_size – 1)`
+
+```cpp
+int minSwaps(int arr[], int n)
+{
+	pair<int, int> arrPos[n];
+	for (int i = 0; i < n; i++)
+	{
+		arrPos[i].first = arr[i];
+		arrPos[i].second = i;
+	}
+	// Sort the array by array element values to
+	// get right position of every element as second
+	// element of pair.
+	sort(arrPos, arrPos + n);
+        bool vis[n] = {false};
+	int ans = 0;
+	for (int i = 0; i < n; i++)
+	{
+		// already swapped and corrected or
+		// already present at correct pos
+		if (vis[i] || arrPos[i].second == i)
+			continue;
+		int cycle_size = 0;
+		int j = i;
+		while (!vis[j])
+		{
+			vis[j] = true;
+
+			// move to next node
+			j = arrPos[j].second;
+			cycle_size++;
+		}
+		ans += (cycle_size - 1);
+	}
+
+	// Return result
+	return ans;
+}
+
+```
+
 * Array rotation by d elements (using reversal algorithm, nahh not necessary!) 
 
 ```
