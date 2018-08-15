@@ -53,7 +53,7 @@ int minSwaps(int arr[], int n)
 		{
 			vis[j] = true;
 
-			// move to next node
+			// move to next node as shown in picture!
 			j = arrPos[j].second;
 			cycle_size++;
 		}
