@@ -184,7 +184,7 @@ for (auto itr = umap.begin(); itr != umap.end(); itr++){
 }
  
 ```
-### unorderd_set
+### unorderd_set (Self-Balancing Binary Search Tree)
 
 ```C++
 unordered_set<string> uset;
