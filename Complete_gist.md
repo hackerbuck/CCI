@@ -22,6 +22,10 @@ sort (arr, arr+n)
 sort (vector.bigin(), vector.end())
 ```
 
+```
+Bubble Sort : 2 - nested loop , swap adjacent elements
+```
+
 * Minimum number of swaps required to sort an array
 
 ![min_swap](https://github.com/hackerbuck/CCI/blob/master/images/b-1.png)
