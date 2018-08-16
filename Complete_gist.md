@@ -159,6 +159,45 @@ int getInvCount(int arr[],int n)
 }
 ```
 
+* Maximium sum of pairs with difference K
+
+```
+// Method to return maximum sum we can get by
+// finding less than K difference pairs
+int maxSumPairWithDifferenceLessThanK(int arr[], int N, int k)
+{
+	int maxSum = 0;
+
+	// Sort elements to ensure every i and i-1 is closest
+	// possible pair
+	sort(arr, arr+N);
+
+	// To get maximum possible sum, iterate from largest to
+	// smallest, giving larger numbers priority over smaller
+	// numbers.
+	for (int i=N-1; i>0; --i)
+	{
+		// Case I: Diff of arr[i] and arr[i-1] is less then K,
+		//		 add to maxSum
+		// Case II: Diff between arr[i] and arr[i-1] is not less
+		//		 then K, move to next i since with sorting we
+		//		 know, arr[i]-arr[i-1] < arr[i]-arr[i-2] and
+		//		 so on.
+		if (arr[i]-arr[i-1] < k)
+		{
+			//Assuming only positive numbers.
+			maxSum += arr[i];
+			maxSum += arr[i-1];
+
+			//When a match is found skip this pair
+			--i; // xD see above we are going from top to bottom !
+		}
+	}
+
+	return maxSum;
+}
+```
+
 * Array rotation by d elements (using reversal algorithm, nahh not necessary!) 
 
 ```
