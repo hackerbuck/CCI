@@ -68,7 +68,7 @@ int minSwaps(int arr[], int n)
 
 ```
 
-* Minimum swaps to make two arrays identical 
+* Minimum swaps to make two arrays identical (Array permutation -- transformation)
 
 ```
 arrA[] = {3, 6, 4, 8}
