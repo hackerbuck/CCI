@@ -66,6 +66,20 @@ int minSwaps(int arr[], int n)
 
 ```
 
+* Minimum swaps to make two arrays identical 
+
+```
+arrA[] = {3, 6, 4, 8}
+arrB[] = {4, 6, 8, 3}
+
+iter -- > map[a[i]] = i
+b[i] = map[b[i]]
+
+b[] = {3, 1, 0, 2}
+
+Then find minimum no of swap to sort the modified array , using  Σi = 1k(cycle_size – 1)` method
+```
+
 * Minimum number of swaps required to sort an array if only adjacent swap possible ==> **Inversion count**
 
 * Inversion count using merge sort  O(log (n))
