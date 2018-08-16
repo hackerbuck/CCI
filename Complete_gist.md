@@ -75,7 +75,7 @@ arrB[] = {4, 6, 8, 3}
 iter -- > map[a[i]] = i
 b[i] = map[b[i]]
 
-b[] = {3, 1, 0, 2}
+b[] = {2, 1, 3, 0}
 
 Then find minimum no of swap to sort the modified array , using  Σi = 1k(cycle_size – 1)` method
 ```
