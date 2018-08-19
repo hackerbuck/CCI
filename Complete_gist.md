@@ -26,7 +26,7 @@ sort (vector.bigin(), vector.end())
 Bubble Sort : 2 - nested loop , swap adjacent elements
 ```
 
-* Minimum number of swaps required to sort an array
+* Minimum number of swaps required to sort an array (Usinf pairs)
 
 ![min_swap](https://github.com/hackerbuck/CCI/blob/master/images/b-1.png)
 
@@ -144,7 +144,7 @@ int MergeSort(int arr[], int aux[], int low, int high)
 }
 ```
 
-* Inversion count using set STL O(n*n)
+* Inversion count using **set** STL O(n*n)
 
 ```
 // Returns inversion count in arr[0..n-1]
@@ -216,6 +216,73 @@ int maxSumPairWithDifferenceLessThanK(int arr[], int N, int k)
 
 	return maxSum;
 }
+```
+
+
+* Minimum Number of Platforms Required for a Railway (Maximum intersection of interval), using multimap
+
+```
+/*
+Input:  arr[]  = {9:00,  9:40, 9:50,  11:00, 15:00, 18:00}
+        dep[]  = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}
+Output: 3
+There are at-most three trains at a time 
+(time between 11:00 to 11:20)
+
+ Time     Event Type     Total Platforms Needed at this Time                               
+ 9:00       Arrival                  1
+ 9:10       Departure                0
+ 9:40       Arrival                  1
+ 9:50       Arrival                  2
+ 11:00      Arrival                  3 
+ 11:20      Departure                2
+ 11:30      Departure                1
+ 12:00      Departure                0
+ 15:00      Arrival                  1
+ 18:00      Arrival                  2 
+ 19:00      Departure                1
+ 20:00      Departure                0
+ 
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int findPlatform(int arr[], int dep[], int n)
+{
+    // Insert all the times (arr. and dep.)
+    // in the multimap., achieving sorted array of arrival and dep
+    multimap<int, char> order;
+    for (int i = 0; i < n; i++) {
+ 
+        // If its arrival then second value
+        // of pair is 'a' else 'd'
+        order.insert(make_pair(arr[i], 'a'));
+        order.insert(make_pair(dep[i], 'd'));
+    }
+ 
+    int result = 0;
+    int plat_needed = 0;
+ 
+    multimap<int, char>::iterator it = order.begin();
+ 
+    // Start iterating the multimap.
+    for (; it != order.end(); it++) {
+ 
+        // If its 'a' then add 1 to plat_needed
+        // else minus 1 from plat_needed.
+        if ((*it).second == 'a')
+            plat_needed++;
+        else
+            plat_needed--;
+ 
+        if (plat_needed>result)
+            result = plat_needed;
+    }
+    return result;
+}
+ 
+
 ```
 
 * Array rotation by d elements (using reversal algorithm, nahh not necessary!) 
