@@ -19,7 +19,7 @@ int gcd(int a, int b)
 
 ```
 sort (arr, arr+n)
-sort (vector.bigin(), vector.end())
+sort (vector.begin(), vector.end())
 ```
 
 ```
