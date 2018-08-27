@@ -28,6 +28,18 @@ pair ======== pair.first , pair.second
 
 map.insert(make_pair(a,b))
 
+#### multinap 
+
+** Iter-over keys :
+
+for (auto itri = multmap.begin(); itri != multmap.end();itri = multmap.upper_bound(itri->first)) {}
+
+** Iter all values for the key
+
+auto range_pair = order.equal_range(itri->first);
+
+for (auto itrj = range_pair.first; itrj != range_pair.second; itrj++){}
+
 ```
 
 ```
