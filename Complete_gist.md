@@ -21,6 +21,13 @@ int gcd(int a, int b)
 sort (arr, arr+n)
 sort (vector.begin(), vector.end())
 *(max_element(arr, arr+n))
+
+itr  ======== itr->first , itr->second
+
+pair ======== pair.first , pair.second
+
+map.insert(make_pair(a,b))
+
 ```
 
 ```
