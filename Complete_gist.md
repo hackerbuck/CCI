@@ -423,6 +423,13 @@ for (auto itr = umap.begin(); itr != umap.end(); itr++){
 }
  
 ```
+
+* Checking note and magazine 
+
+1) freq count of note
+2) subtrace freq from map for each word in magazine (**Until value becomes 0**)
+3) iterate map and check all freq count is 0
+
 ### unorderd_set (Self-Balancing Binary Search Tree)
 
 ```C++
