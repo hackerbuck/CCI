@@ -20,6 +20,7 @@ int gcd(int a, int b)
 ```
 sort (arr, arr+n)
 sort (vector.begin(), vector.end())
+*(max_element(arr, arr+n))
 ```
 
 ```
