@@ -22,6 +22,9 @@ sort (arr, arr+n)
 sort (vector.begin(), vector.end())
 *(max_element(arr, arr+n))
 
+int pos = s.find(":")
+string sub = s.substr(pos,len);
+
 itr  ======== itr->first , itr->second
 
 pair ======== pair.first , pair.second
@@ -302,8 +305,40 @@ int findPlatform(int arr[], int dep[], int n)
     return result;
 }
  
-
 ```
+
+* No of anagram pairs in substring (**Hashmap awesomness**)
+
+
+```C++
+int sherlockAndAnagrams(string s) {
+    int i,j, res = 0;
+    int n = s.length();
+    unordered_map<string,int>  mapi;
+    
+    // Generate Substring
+    
+    for (i = 0; i < n ; i++) {
+        for (j = 1;j <= n - i ; j++) {
+            string sub = s.substr(i,j);
+            if (j > 1) {
+                sort (sub.begin(), sub.end());
+            }
+	    
+	    // Sort the substring and store in map 
+	    // so 'ab' and 'ba' have same key
+            mapi[sub] += 1;
+        }
+    }
+    for (auto itr = mapi.begin(); itr != mapi.end();itr++) {
+        int n = itr->second;
+        res += (n * (n - 1)) / 2;
+    }
+    return res;
+}
+```
+
+
 
 * Array rotation by d elements (using reversal algorithm, nahh not necessary!) 
 
