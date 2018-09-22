@@ -22,6 +22,18 @@ sort (arr, arr+n)
 sort (vector.begin(), vector.end())
 *(max_element(arr, arr+n))
 
+bool modsort(const pair<int,int> &a, const pair<int,int> &b) {
+    int x = a.first % k;
+    int y = b.first % k;
+    if (x == y) {
+        return a.second < b.second;
+    } else {
+        return x < y;
+    }
+}
+
+sort (vector.begin(), vector.end(), modsort);
+
 int pos = s.find(":")
 string sub = s.substr(pos,len);
 
