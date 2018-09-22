@@ -13,7 +13,7 @@ int gcd(int a, int b)
 
 * LCM of 2 numbers : (a * b)/gcd (a,b)
 
-
+* Array roataion  `[(N-1)- (d % N) + 1] + 1 ---> N and 0 -> [(N-1)- (d % N) + 1]`
 
 * **Sorting** in C++ : 
 
