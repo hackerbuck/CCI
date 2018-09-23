@@ -15,6 +15,10 @@ int gcd(int a, int b)
 
 * Array roataion  `[(N-1)- (d % N) + 1] + 1 ---> N and 0 -> [(N-1)- (d % N) + 1]`
 
+* To compare string in c++ --> a == b , a < b (tells u about lexicographicaly order) [TODO : compare(), string slicing]
+
+* TODO: read about radix sort
+
 * **Sorting** in C++ : 
 
 ```
@@ -59,6 +63,13 @@ for (auto itrj = range_pair.first; itrj != range_pair.second; itrj++){}
 
 ```
 Bubble Sort : 2 - nested loop , swap adjacent elements
+
+Maximum freq diff + sorted height order in O(nlogn) [I was able to come up only with O(n2)]
+
+1) sort height, freq pair in acending order
+2) Maintain max freq diff between 2 heights 
+3) Maintain min freq + repeat 1-3
+
 ```
 
 * Minimum number of swaps required to sort an array (Usinf pairs)
