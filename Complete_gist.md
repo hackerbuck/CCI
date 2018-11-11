@@ -133,6 +133,18 @@ void rvereseArray(int arr[], int start, int end)
 }  
 ```
 
+* Array rotation O(1) space 
+
+```
+/* Function to left rotate arr[] of size n by d */
+void leftRotate(int arr[], int d, int n) 
+{ 
+    rvereseArray(arr, 0, d-1); 
+    rvereseArray(arr, d, n-1); 
+    rvereseArray(arr, 0, n-1); 
+} 
+```
+
 * Minimum number of swaps required to sort an array (Usinf pairs)
 
 ![min_swap](https://github.com/hackerbuck/CCI/blob/master/images/b-1.png)
@@ -420,16 +432,6 @@ int sherlockAndAnagrams(string s) {
     }
     return res;
 }
-```
-
-
-
-* Array rotation by d elements (using reversal algorithm, nahh not necessary!) 
-
-```
-  rvereseArray(arr, 0, d-1);
-  rvereseArray(arr, d, n-1);
-  rvereseArray(arr, 0, n-1);
 ```
 
 ## C++ STL libraries
