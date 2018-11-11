@@ -72,6 +72,51 @@ Maximum freq diff + sorted height order in O(nlogn) [I was able to come up only 
 
 ```
 
+* Longest Common Prefix 
+   * Using word by word  `prefix = arr[0]  ; for(){ prefix = common(prefix,arr[i])}`  --- O(MN)
+   * using Character by Character Matching  -- O(MN) but usefull when there are lot of strings
+         ![LCS](https://www.geeksforgeeks.org/wp-content/uploads/longest_common_prefix5.jpg)
+```
+	 int findMinLength(string arr[], int n) 
+{ 
+    int min = arr[0].length(); 
+  
+    for (int i=1; i<n; i++) 
+        if (arr[i].length() < min) 
+            min = arr[i].length(); 
+  
+    return(min); 
+} 
+  
+// A Function that returns the longest common prefix 
+// from the array of strings 
+string commonPrefix(string arr[], int n) 
+{ 
+    int minlen = findMinLength(arr, n); 
+  
+    string result; // Our resultant string 
+    char current;  // The current character 
+  
+    for (int i=0; i<minlen; i++) 
+    { 
+        // Current character (must be same 
+        // in all strings to be a part of 
+        // result) 
+        current = arr[0][i]; 
+  
+        for (int j=1 ; j<n; j++) 
+            if (arr[j][i] != current) 
+                return result; 
+  
+        // Append to result 
+        result.push_back(current); 
+    } 
+  
+    return (result); 
+} 
+```
+
+
 * Minimum number of swaps required to sort an array (Usinf pairs)
 
 ![min_swap](https://github.com/hackerbuck/CCI/blob/master/images/b-1.png)
