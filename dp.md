@@ -28,6 +28,19 @@ for (int i = 2; i < n; i++) {
 return arr[n];
 ```
 
+* Food for thought 
+
+```
+You are climbing a stair case. It takes n steps to reach to the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+```
+
+```
+f(n) = f (n-1) + f(n-2) // that is f(4) = (3'rd step + 1step) + (2'nd step + 2 step)
+```
+
+
 
 1) Longest Increasing Subsequence
 
